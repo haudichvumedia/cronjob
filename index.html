@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cron Job Scheduler</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Cron Job Scheduler</h1>
+            <p>Schedule and track your cron jobs</p>
+        </header>
+
+        <!-- Cron Job Form -->
+        <section class="job-form">
+            <h2>Add New Job</h2>
+            <input type="text" id="jobName" placeholder="Enter job name" class="input-field">
+            <input type="url" id="jobUrl" placeholder="Enter job URL" class="input-field">
+            <select id="jobInterval" class="input-field">
+                <option value="1">Every 1 minute</option>
+                <option value="5">Every 5 minutes</option>
+                <option value="10">Every 10 minutes</option>
+                <option value="30">Every 30 minutes</option>
+                <option value="60">Every 60 minutes</option>
+            </select>
+            <button id="addJobBtn" class="btn">Add Job</button>
+        </section>
+
+        <!-- Cron Job List -->
+        <section class="job-list">
+            <h2>Your Scheduled Jobs</h2>
+            <div id="jobList" class="job-list-container">
+                <!-- Jobs will be dynamically loaded here -->
+            </div>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
